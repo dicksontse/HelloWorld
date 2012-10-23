@@ -39,7 +39,7 @@ namespace HelloWorld
         /// search results, and so forth.
         /// </summary>
         /// <param name="args">Details about the launch request and process.</param>
-        protected override void OnLaunched(LaunchActivatedEventArgs args)
+        protected async override void OnLaunched(LaunchActivatedEventArgs args)
         {
             Frame rootFrame = Window.Current.Content as Frame;
 
@@ -54,6 +54,7 @@ namespace HelloWorld
                 if (args.PreviousExecutionState == ApplicationExecutionState.Terminated)
                 {
                     //TODO: Load state from previously suspended application
+                    await HelloWorld.Common.SuspensionManager.RestoreAsync();
                 }
 
                 // Place the frame in the current Window
