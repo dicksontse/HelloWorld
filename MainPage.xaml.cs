@@ -72,5 +72,13 @@ namespace HelloWorld
             Windows.Storage.ApplicationDataContainer roamingSettings = Windows.Storage.ApplicationData.Current.RoamingSettings;
             roamingSettings.Values["userName"] = nameInput.Text;
         }
+
+        private void PhotoPageButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (this.Frame != null)
+            {
+                this.Frame.Navigate(typeof(PhotoPage));
+            }
+        }
     }
 }

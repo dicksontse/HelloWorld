@@ -44,6 +44,7 @@
                 <Button Content="Say &quot;Hello&quot;" Click="Button_Click"/>
             </StackPanel>
             <TextBlock x:Name="greetingOutput" Style="{StaticResource BigGreenTextStyle}"/>
+            <Button x:Name="photoPageButton" Content="Go to photo page" Click="PhotoPageButton_Click"/>
         </StackPanel>
 
         <VisualStateManager.VisualStateGroups>
