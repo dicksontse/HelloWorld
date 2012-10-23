@@ -47,6 +47,7 @@ namespace HelloWorld
         /// <param name="pageState">An empty dictionary to be populated with serializable state.</param>
         protected override void SaveState(Dictionary<String, Object> pageState)
         {
+            pageState["greetingOutputText"] = greetingOutput.Text;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
