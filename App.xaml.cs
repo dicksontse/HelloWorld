@@ -49,6 +49,7 @@ namespace HelloWorld
             {
                 // Create a Frame to act as the navigation context and navigate to the first page
                 rootFrame = new Frame();
+                HelloWorld.Common.SuspensionManager.RegisterFrame(rootFrame, "appFrame");
 
                 if (args.PreviousExecutionState == ApplicationExecutionState.Terminated)
                 {

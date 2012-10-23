@@ -53,5 +53,11 @@ namespace HelloWorld
         {
             greetingOutput.Text = "Hello, " + nameInput.Text + "!";
         }
+
+        private void NameInput_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            Windows.Storage.ApplicationDataContainer roamingSettings = Windows.Storage.ApplicationData.Current.RoamingSettings;
+            roamingSettings.Values["userName"] = nameInput.Text;
+        }
     }
 }
